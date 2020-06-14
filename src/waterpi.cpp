@@ -1,4 +1,6 @@
 #include <cstdio>
+#include <iostream>
+#include <cmath>
 #include "adc.h"
 
 #define ADC_CS 0
