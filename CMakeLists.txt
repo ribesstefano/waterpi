@@ -3,8 +3,9 @@ cmake_minimum_required(VERSION 3.10)
 # set the project name
 project(WaterPi VERSION 1.0)
 
-# # add the executable
-# add_executable(WaterPi tutorial.cxx)
+# add the executable
+add_executable(WaterPi ${PROJECT_BINARY_DIR}/src/adc.cpp)
+
 SET(GCC_COVERAGE_COMPILE_FLAGS "")
 SET(GCC_COVERAGE_LINK_FLAGS    "-lwiringPi -lpthread -lm -lcrypt -lrt")
 
