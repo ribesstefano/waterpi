@@ -32,3 +32,4 @@ target_link_libraries(WaterPi rt)
 target_link_libraries(WaterPi m)
 
 target_link_libraries(WaterPi ADC_LIB)
+target_link_libraries(WaterPi THERMISTOR_LIB)
