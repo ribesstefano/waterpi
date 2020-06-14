@@ -11,16 +11,7 @@ typedef std::map<std::string, int> GPIO_Map;
 class Adc {
 public:
   Adc(const int cs_gpio_id, const int clk_gpio_id, const int din_gpio_id,
-      const int dout_gpio_id) {
-    pins["cs"] = cs_gpio_id;
-    pins["clk"] = clk_gpio_id;
-    pins["din"] = din_gpio_id;
-    pins["dout"] = dout_gpio_id;
-    pinMode(pins["dout"], OUTPUT);
-    if (pins["din"] != pins["dout"]) {
-      pinMode(pins["din"], INPUT);
-    }
-  }
+      const int dout_gpio_id);
   ~Adc();
 
   unsigned char Read();

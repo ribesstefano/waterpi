@@ -1,7 +1,7 @@
 #include <cstdio>
 #include <iostream>
 #include <cmath>
-#include "adc.h"
+#include "waterpi.h"
 
 #define ADC_CS 0
 #define ADC_CLK 1

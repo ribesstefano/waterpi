@@ -1,5 +1,19 @@
 #include "adc.h"
 
+Adc::Adc(const int cs_gpio_id, const int clk_gpio_id, const int din_gpio_id,
+    const int dout_gpio_id) {
+  pins["cs"] = cs_gpio_id;
+  pins["clk"] = clk_gpio_id;
+  pins["din"] = din_gpio_id;
+  pins["dout"] = dout_gpio_id;
+  pinMode(pins["dout"], OUTPUT);
+  if (pins["din"] != pins["dout"]) {
+    pinMode(pins["din"], INPUT);
+  }
+}
+
+Adc::~Adc() {}
+
 unsigned char Adc::Read() {
   unsigned char i;
   unsigned char read_dat_1 = 0, read_dat_2 = 0;
