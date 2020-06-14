@@ -1,6 +1,6 @@
 #include "thermistor.h"
 
-float getTemp(int adcVal) {
+float getTemp(const int adcVal) {
   // Converts input from a thermistor voltage divider to a temperature value.
   // The voltage divider consists of thermistor Rt and series resistor R0.
   // Reference: https://www.digikey.com/en/maker/projects/how-to-measure-temperature-with-an-ntc-thermistor/4a4b326095f144029df7f2eca589ca54

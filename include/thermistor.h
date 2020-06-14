@@ -3,6 +3,6 @@
 
 #include <cmath>
 
-float getTemp(int adcVal);
+float getTemp(const int adcVal);
 
 #endif // end WATERPI_THERMISTOR_H_
