@@ -47,8 +47,3 @@ void Adc::WriteGPIO_Wait(const int gpio_id, const int value) {
 void Adc::WriteGPIO(const int gpio_id, const int value) {
   digitalWrite(gpio_id, value);
 }
-
-int main(int argc, char const *argv[]) {
-  /* code */
-  return 0;
-}

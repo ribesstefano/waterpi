@@ -16,6 +16,10 @@ public:
     pins["clk"] = clk_gpio_id;
     pins["din"] = din_gpio_id;
     pins["dout"] = dout_gpio_id;
+    pinMode(pins["dout"], OUTPUT);
+    if (pins["din"] != pins["dout"]) {
+      pinMode(pins["din"], INPUT);
+    }
   }
   ~Adc();
 
