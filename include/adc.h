@@ -1,12 +1,10 @@
 #ifndef WATERPI_ADC_H_
 #define WATERPI_ADC_H_
 
-#include <cstring>
-#include <map>
-
+#include "wiringPi.h"
 #include "gpio.h"
 
-typedef std::map<std::string, int> GPIO_Map;
+namespace waterpi {
 
 class Adc {
 public:
@@ -19,8 +17,9 @@ private:
   void WriteGPIO_Wait(const int gpio_id, const int value);
   void WriteGPIO(const int gpio_id, const int value);
 
-  GPIO_Map pins;
+  GPIO_Map pins_;
 };
 
+} // waterpi
 
 #endif // end WATERPI_ADC_H_

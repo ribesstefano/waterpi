@@ -7,3 +7,6 @@ target_include_directories(ADC_LIB PUBLIC ${CMAKE_SOURCE_DIR}/include)
 
 add_library(THERMISTOR_LIB STATIC ${CMAKE_SOURCE_DIR}/src/thermistor.cpp)
 target_include_directories(THERMISTOR_LIB PUBLIC ${CMAKE_SOURCE_DIR}/include)
+
+add_library(PUMP_LIB STATIC ${CMAKE_SOURCE_DIR}/src/pump.cpp)
+target_include_directories(PUMP_LIB PUBLIC ${CMAKE_SOURCE_DIR}/include)

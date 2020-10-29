@@ -33,3 +33,4 @@ target_link_libraries(WaterPi m)
 
 target_link_libraries(WaterPi ADC_LIB)
 target_link_libraries(WaterPi THERMISTOR_LIB)
+target_link_libraries(WaterPi PUMP_LIB)

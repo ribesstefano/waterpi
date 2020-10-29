@@ -3,6 +3,10 @@
 
 #include <cmath>
 
+namespace waterpi {
+
 float getTemp(const int adcVal);
+
+} // waterpi
 
 #endif // end WATERPI_THERMISTOR_H_

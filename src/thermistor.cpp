@@ -1,5 +1,7 @@
 #include "thermistor.h"
 
+namespace waterpi {
+
 float getTemp(const int adcVal) {
   // Converts input from a thermistor voltage divider to a temperature value.
   // The voltage divider consists of thermistor Rt and series resistor R0.
@@ -16,3 +18,5 @@ float getTemp(const int adcVal) {
 
   return 1 / (invT0 + invBeta * log(Rt / R0)) - 273.15;
 }
+
+} // waterpi
