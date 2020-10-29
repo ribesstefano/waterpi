@@ -15,7 +15,7 @@ class Pump {
 public:
   Pump(const int start_gpio_id);
   ~Pump();
-  void Start(const int timeout = -1);
+  void Start(const int timeout);
   void Stop();
   bool is_active();
   float get_pumped_liters();

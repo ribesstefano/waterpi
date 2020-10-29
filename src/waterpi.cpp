@@ -1,7 +1,9 @@
 #include <cstdio>
 #include <iostream>
-#include <wiringSerial.h>
 #include "waterpi.h"
+
+#include <wiringSerial.h>
+#include <string>
 
 #define ADC_CS 0
 #define ADC_CLK 1
@@ -41,9 +43,11 @@ int main(int argc, char const *argv[]) {
   int arduino = serialOpen("/dev/ttyACM0", 9600);
 
   if (serialDataAvail(arduino)) {
+    std::string str;
     while(serialDataAvail(arduino) > 0) {
-      std::cout << serialGetchar(arduino) << std::endl;
+      str += char(serialGetchar(arduino));
     }
+    std::cout << str << std::endl;
   }
   serialClose(arduino);
 
